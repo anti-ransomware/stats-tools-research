@@ -17,7 +17,7 @@ cd stats-tools-research
 cd code
 ```
 
-Before moving on, I recommend setting up a virtual environment to prevent the
+Before moving on, we recommend setting up a virtual environment to prevent the
 upcoming package installations from affecting your global Python installation.
 Please see https://docs.python.org/3/tutorial/venv.html for instructions
 
