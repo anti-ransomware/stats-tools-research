@@ -6,6 +6,7 @@ CSV_PATH = os.path.join(".", "results")
 CSV_HEADERS = ["File-bytes","Entropy","Chi-square","Mean","Monte-Carlo-Pi","Serial-Correlation"]
 POSSIBLE_DIRS = ["images", "compressed", "encrypted"]
 
+
 def get_user_source():
     # Get user-specified source directory
     parser = argparse.ArgumentParser()
@@ -17,6 +18,7 @@ def get_user_source():
 
     # Return selected csv folder name and full path of csvs to fix
     return chosen_dir, target_path
+
 
 def main():
     chosen, target = get_user_source()
@@ -35,4 +37,6 @@ def main():
                             care = row[0][2:]
                             csvwriter.writerow(care.split(","))
 
-main()
+
+if __name__ == "__main__":
+    main()

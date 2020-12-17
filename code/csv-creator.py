@@ -1,11 +1,11 @@
 import subprocess
 import argparse
-import csv
 import os
 
 CSV_HEADERS = ["File-bytes","Entropy","Chi-square","Mean","Monte-Carlo-Pi","Serial-Correlation"]
 RESULTS_FILE_NAME = "results.csv"
 POSSIBLE_DIRS = ["images", "compressed", "encrypted"]
+
 
 def get_user_source():
     # Get user-specified source directory
@@ -18,7 +18,7 @@ def get_user_source():
     results_path = os.path.join(".", "results", chosen_dir)
 
     # Return path of source data and path where resulting csvs should be stored
-    return (source_path, results_path)
+    return source_path, results_path
 
 
 def main():
@@ -34,4 +34,5 @@ def main():
                         subprocess.call(["ent", "-t", os.path.join(root, file)], stdout=f)
 
 
-main()
+if __name__ == "__main__":
+    main()

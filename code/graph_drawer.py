@@ -26,7 +26,9 @@ plt.rcParams.update({"legend.fontsize": 10})
 """
 ===== PLOT CONFIGURATION START =====
 """
-# Verticle line x-coordinates for group visualisation
+
+
+# Vertical line x-coordinates for group visualisation
 def xthresholdswitch(index):
     switch = {
         "images": [1004, 1000, 1000, 6024, 6000, 6024, 6000],
@@ -34,6 +36,7 @@ def xthresholdswitch(index):
         "encrypted": [986, 0]
     }
     return switch.get(index)
+
 
 # Title and axes labels
 def titleswitch(index):
@@ -46,6 +49,7 @@ def titleswitch(index):
     }
     return switch.get(index)
 
+
 # Y-Axis limits
 def ylimswitch(index):
     switch = {
@@ -56,6 +60,7 @@ def ylimswitch(index):
         "corr": (-1.0, 1.0)
     }
     return switch.get(index)
+
 
 # Y-Coordinate of ythreshold line
 def ythresholdswitch(index):
@@ -70,6 +75,7 @@ def ythresholdswitch(index):
         # "corr": 0.00
     }
     return switch.get(index)
+
 
 # Index of each statistic in the csvs
 def statswitch(index):
@@ -86,8 +92,10 @@ def statswitch(index):
 ===== PLOT CONFIGURATION END =====
 """
 
+
 def thresholdsum(li):
     return sum(li)
+
 
 def main():
     # Get user input

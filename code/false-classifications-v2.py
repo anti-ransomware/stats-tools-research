@@ -8,10 +8,12 @@ THRESHOLDS = [(126.23,128.78), (3.11,3.17), (-0.01,0.01)]
 CSV_HEADERS = ["file-name", "mean", "pi", "correlation"]
 OUTPUT = os.path.join(".", "output")
 
+
 def write_to_csv(data):
     with open(os.path.join(OUTPUT, "fpn2.csv"), "a", newline='') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         csvwriter.writerow(data)
+
 
 def thresh_checker(data, title, index):
     threshold = THRESHOLDS[index]
@@ -27,7 +29,8 @@ def thresh_checker(data, title, index):
     # print("Above: %s, Below: %s, Equal: %s" % (a_count, b_count, e_count))
 
     # In, out
-    return("%s/%s/  %.2f/%.2f" % (i_count, o_count, (i_count/len(data)*100), (o_count/len(data)*100)))
+    return "%s/%s/  %.2f/%.2f" % (i_count, o_count, (i_count/len(data)*100), (o_count/len(data)*100))
+
 
 def main():
     # Get user input
@@ -63,5 +66,7 @@ def main():
 
             write_to_csv([current_path, tuple_m, tuple_p, tuple_co])
 
-write_to_csv(CSV_HEADERS)
-main()
+
+if __name__ == "__main__":
+    write_to_csv(CSV_HEADERS)
+    main()
