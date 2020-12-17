@@ -15,19 +15,24 @@ To generate CSVs and graphs:
 git clone https://github.com/anti-ransomware/stats-tools-research
 cd stats-tools-research
 cd code
+```
 
-(Before moving on, I recommend setting up a virtual environment to prevent the
+Before moving on, I recommend setting up a virtual environment to prevent the
 upcoming package installations from affecting your global Python installation.
-Please see https://docs.python.org/3/tutorial/venv.html for instructions)
+Please see https://docs.python.org/3/tutorial/venv.html for instructions
 
+```
 python3 -m pip install -r requirements.txt
 python3 dir-setup.py
+```
 
 Put the files you want to analyse in the relevant directory within the project
-root directory. For example, compressed data would go in ./compressed
+root directory. For example, compressed data should be placed in ./compressed
 
+```
 python3 csv-creator.py [chosen directory]
 python3 csv-fixer.py [chosen directory]
 python3 graph-drawer.py [chosen directory] [chosen statistic]
 ```
+
 Graphs are saved in ./output/
