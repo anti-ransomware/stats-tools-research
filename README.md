@@ -7,6 +7,10 @@ Presented at ISC 2020 (https://isc2020.petra.ac.id)
 Jamie Pont, Budi Arief and Julio Hernandez-Castro  
 University of Kent
 
+https://link.springer.com/chapter/10.1007/978-3-030-62974-8_12
+
+---
+
 If you have any questions, or would like access to our dataset of images (JPG, PNG and WebP), compressed data (BZip2, GZip and LZMA) and encrypted data (AES-256-CBC), please contact Jamie at jjp31@kent.ac.uk
 
 To generate CSVs and graphs:
